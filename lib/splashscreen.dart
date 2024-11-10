@@ -24,10 +24,6 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Displaying the splash image
-            Image.asset('assets/myappsplash.png', width: 200, height: 200),
-            SizedBox(height: 20),
-            // Optional: You can add some text below the image
             Text(
               'Welcome to Project Report App',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),

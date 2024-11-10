@@ -1,6 +1,6 @@
+import 'package:development/homescreen.dart';
+import 'package:development/splashscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:project/login.dart';
-import 'package:project/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,9 +33,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:SignupScreen()
-      //LoginScreen()
-
+      home:HomeScreen()
+      // SplashScreen()
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
