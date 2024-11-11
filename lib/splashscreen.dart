@@ -20,17 +20,26 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white, // Background color
-    appBar: AppBar(title: Text('Development Process',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),),
+    return Scaffold(backgroundColor: Colors.cyan.shade100,
+      appBar: AppBar(title: Text('Development Process',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,)),backgroundColor: Colors.grey,centerTitle: true,),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Container(decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage('lib/assets/myappsplash.png'))
+          children: [
+          Container(
+          height: 300, // Specify the height
+          width: 400, // Specify the width
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('lib/assets/splash.png'),
           ),),
+    padding: EdgeInsets.only(bottom: 20), // Space from bottom of the screen
+    child: Text(
+    'Developed by Annosha Fatima',
+    style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,
+    color: Colors.black54,
 
-          ],
+    ))   )   ],
         ),
       ),
     );
