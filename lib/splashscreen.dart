@@ -1,3 +1,4 @@
+import 'package:development/homescreen.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -12,7 +13,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     // Navigate to the home screen after a delay
     Timer(Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, '/home');
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+    //  Navigator.pushReplacementNamed(context, '/home');
     });
   }
 
@@ -20,14 +22,14 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white, // Background color
+    appBar: AppBar(title: Text('Development Process',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Welcome to Project Report App',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
+          children: [Container(decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage('lib/assets/myappsplash.png'))
+          ),),
+
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:development/developmentprocess.dart';
 import 'package:development/homescreen.dart';
 import 'package:development/splashscreen.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -33,8 +34,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:HomeScreen()
-      // SplashScreen()
+      home:
+      SplashScreen()
+
+      //DevelopmentProcessScreen()
+      //HomeScreen()
+
       //const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

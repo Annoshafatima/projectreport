@@ -1,3 +1,6 @@
+import 'package:development/challengescreen.dart';
+import 'package:development/developmentprocess.dart';
+import 'package:development/lessonscreen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,15 +12,15 @@ class HomeScreen extends StatelessWidget {
         children: [
           ListTile(
             title: Text('Development Process'),
-            onTap: () => Navigator.pushNamed(context, '/development_process'),
+            onTap: () =>  Navigator.push(context, MaterialPageRoute(builder: (context)=>DevelopmentProcessScreen()))
           ),
           ListTile(
             title: Text('Challenges Faced'),
-            onTap: () => Navigator.pushNamed(context, '/challenges'),
+            onTap: () => Navigator.push(context,MaterialPageRoute(builder: (context)=>ChallengesScreen()))
           ),
           ListTile(
             title: Text('Lessons Learned'),
-            onTap: () => Navigator.pushNamed(context, '/lessons'),
+            onTap: () => Navigator.push(context,MaterialPageRoute(builder: (context)=>LessonsScreen()))
           ),
         ],
       ),
