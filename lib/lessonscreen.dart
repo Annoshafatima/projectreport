@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 class LessonsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Lessons Learned')),
+    return Scaffold(backgroundColor: Colors.blueGrey.shade900,
+      appBar: AppBar(title: Text('Lessons Learned', style: TextStyle(
+          color: Colors.black, fontWeight: FontWeight.bold),),
+        backgroundColor: Colors.grey,
+        centerTitle: true,),
+
       body: ListView(
         padding: EdgeInsets.all(16),
         children: [
@@ -13,7 +17,7 @@ class LessonsScreen extends StatelessWidget {
           Text('Gained a deeper understanding of Flutter widgets, state management, and performance optimization.'),
 
           SizedBox(height: 16),
-          Text('Problem-Solving Skills', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text('Problem-Solving Skills', style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
           SizedBox(height: 8),
           Text('Encountering and resolving multiple bugs helped us improve our problem-solving skills especially in debugging asynchronous code'),
 

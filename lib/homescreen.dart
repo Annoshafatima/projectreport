@@ -12,43 +12,50 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: Colors.grey,
           centerTitle: true,),
 
-        body: Column(mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Container(
-                height: 900, // Specify the height
-                width: 800, // Specify the width
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('lib/assets/home.png'),
-                  ),), padding: EdgeInsets.only(left: 50),),
+        body: SingleChildScrollView(
+          child: Column(mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  height: 900,
+                  width: 800,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('lib/assets/home.png'),
+                    ),
+                  ),
+                  padding: EdgeInsets.only(left: 50),)
+                ,
+                ListTile(
+                    title: Text('Development Process', style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),),
+                    onTap: () =>
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => DevelopmentProcessScreen()))
+                ),
+                ListTile(
+                    title: Text('Challenges Faced', style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),),
+                    onTap: () =>
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => ChallengesScreen()))
+                ),
+                ListTile(
+                    title: Text('Lessons Learned', style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),),
+                    onTap: () =>
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => LessonsScreen()))
+          
+                ),
+          
+          
+          
+          
+                    ],
+                  ),
+        ),
 
-              ListView(
-                children: [
-                  ListTile(
-                      title: Text('Development Process', style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold),),
-                      onTap: () =>
-                          Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => DevelopmentProcessScreen()))
-                  ),
-                  ListTile(
-                      title: Text('Challenges Faced', style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold),),
-                      onTap: () =>
-                          Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => ChallengesScreen()))
-                  ),
-                  ListTile(
-                      title: Text('Lessons Learned', style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold),),
-                      onTap: () =>
-                          Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => LessonsScreen()))
 
-                  ),
-                ],
-              ),
-            ])
     );
   }
 }

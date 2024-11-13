@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 class DevelopmentProcessScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Development Process')),
+    return Scaffold(backgroundColor: Colors.blueGrey.shade100,
+      appBar: AppBar(title: Text('Development Process', style: TextStyle(
+          color: Colors.black, fontWeight: FontWeight.bold),), backgroundColor: Colors.grey,
+        centerTitle: true,),
+
       body: ListView(
         padding: EdgeInsets.all(16),
         children: [
